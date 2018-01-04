@@ -43,6 +43,7 @@
   </div>
 
   <script>
+    //only run the function 'checkSlide' at most every 20 millisec
     function debounce(func, wait = 20, immediate = true) {
       var timeout;
       return function() {
@@ -57,6 +58,36 @@
         if (callNow) func.apply(context, args);
       };
     }
+
+    const sliderImages = document.querySelectorAll('.slide-in');
+
+    function checkSlide(){
+      //loop over every single image and figure out where the image needs to be shown.
+      //the goal is when the image in at 50% of its height, we want to animate it in.
+
+      sliderImages.forEach(sliderImage => {
+        //we want to know the pixel position from the bottom edge of the window and 50 percent of the image height
+        
+        //half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+        //bottom of the image
+        //offsetTop gives height of top of image to the top of the page
+        const imageBottom = sliderImage.offsetTop + sliderImage.height;
+
+        //starting the if statement
+        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isNotScrolledPast = window.scrollY < imageBottom;
+
+        if (isHalfShown && isNotScrolledPast) {
+          sliderImage.classList.add('active');
+        } else {
+          sliderImage.classList.remove('active');
+        }
+      });
+    };
+
+    //added the debounce function so that checkSlide doesn't run all the time
+    window.addEventListener('scroll', debounce(checkSlide));
 
   </script>
 
