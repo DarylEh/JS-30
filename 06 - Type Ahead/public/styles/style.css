@@ -1,0 +1,209 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+audio, canvas, video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em; }
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button, input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0; }
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, figure {
+  margin: 0; }
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #ffc600;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+input {
+  width: 100%;
+  padding: 20px; }
+
+.search-form {
+  max-width: 400px;
+  margin: 50px auto; }
+
+input.search {
+  margin: 0;
+  text-align: center;
+  outline: 0;
+  border: 10px solid #F7F7F7;
+  width: 120%;
+  left: -10%;
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  border-radius: 5px;
+  font-size: 40px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19); }
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /*perspective:20px;*/ }
+
+.suggestions li {
+  background: white;
+  list-style: none;
+  border-bottom: 1px solid #D8D8D8;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin: 0;
+  padding: 20px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: capitalize; }
+
+.suggestions li:nth-child(even) {
+  -webkit-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+          transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#EFEFEF));
+  background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%); }
+
+.suggestions li:nth-child(odd) {
+  -webkit-transform: perspective(100px) rotateX(-3deg) translateY(3px);
+          transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#EFEFEF));
+  background: linear-gradient(to top, #ffffff 0%, #EFEFEF 100%); }
+
+span.population {
+  font-size: 15px; }
+
+.hl {
+  background: #ffc600; }
