@@ -27,6 +27,39 @@
 
   <script>
     // 👀👀👀👀👀👀👀👀👀👀👀👀👀👀👀
+    //grabbing all the 'a' elements
+    const triggers = document.querySelectorAll ('a');
+    //creating a span tag
+    const highlight = document.createElement('span');
+    //add a class of .highlight to the span tag
+    highlight.classList.add('highlight');
+    //appending span to the DOM
+    document.body.append(highlight);
+      
+      function highlighLink(){
+        //getBoundingClientRect method gives you height, width, top, left etc 
+        const linkCords = this.getBoundingClientRect();
+        //creating a cords object with size(width & height) and position(top & left)
+        const cords = {
+          width: linkCords.width,
+          height: linkCords.height,
+          top:linkCords.top + window.scrollY,
+          left: linkCords.left + window.scrollX
+        }
+        //adding inline styles to highlight
+        highlight.style.width = `${cords.width}px`;
+        highlight.style.height = `${cords.height}px`;
+        highlight.style.transform = `translate(${cords.left }px, ${cords.top}px)`;
+        console.log(cords);
+      }
+      //taking all the 'a' tags and add a mouseenter eventlistener, then running highlightLink function
+      triggers.forEach(a => a.addEventListener ('mouseenter', highlighLink));
+
+
+
+
+
+
   </script>
 </body>
 </html>
